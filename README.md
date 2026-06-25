@@ -1,34 +1,34 @@
-# WSL Manager (DistroShelf for Windows)
+# WSL Manager
 
 WSL Manager is a premium, native Windows WPF desktop application designed to manage your Windows Subsystem for Linux (WSL) distributions with a beautiful, modern GUI. It provides a visual dashboard and administration utilities similar to Distrobox/Distroshelf on Linux.
 
 ---
 
-## ✨ Features
+## Features
 
-* **📦 Distro Dashboard**:
+* **Distro Dashboard**:
   * Visual cards showing all registered WSL distros.
   * Real-time status indicators (Running/Stopped) and version badges (WSL 1/WSL 2).
   * Direct launch terminal, terminate instance, set default distro, duplicate (clone), export (.tar backup), and delete (unregister) distros.
   * Quick-launch File Explorer directly inside any distro's root directory (`\\wsl.localhost\`).
-* **💻 Interactive Run Command**:
+* **Interactive Run Command**:
   * Execute shell commands inside any target distro and view the output streamed in real-time in a monospace command box.
-* **🌐 Distro Installer Catalog**:
+* **Distro Installer Catalog**:
   * Official WSL online catalog listing distributions like Ubuntu, Debian, Kali, SLES, and Oracle Linux.
   * Direct one-click installation with external terminal redirection (supports interactive UNIX user credentials creation).
   * Custom Rootfs Import tool to register custom `.tar` packages into any local destination directory.
-* **⚙️ Global WSL Config Editor**:
+* **Global WSL Config Editor**:
   * Edit your `%USERPROFILE%\.wslconfig` engine configuration with a simple visual editor (adjust memory limits, CPU cores, swap space, localhost forwarding, nested virtualization, and DNS tunneling).
-* **🩺 System Doctor**:
+* **System Doctor**:
   * Automated helpers to enable Windows WSL optional features, Virtual Machine Platform components, set default WSL versions, and run kernel package updates. Actions triggering optional feature enablement automatically request Windows UAC administrator elevation.
-* **🎨 Premium Visuals**:
+* **Premium Visuals**:
   * Deep dark-mode slate theme with customized scrollbars, buttons, textboxes, and combo boxes.
   * Customized title bar integrated directly into the borderless visual layout.
   * Clean, vector-based SVG geometry paths for all interface icons.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 * Windows 10 (Build 19041 and higher) or Windows 11.
@@ -41,7 +41,7 @@ WSL Manager is a premium, native Windows WPF desktop application designed to man
 
 ---
 
-## 🛠️ Build & Compile from Source
+## Build & Compile from Source
 
 You can use the interactive script at the root directory to clean or build the project, or run the standard `dotnet` CLI commands manually.
 
@@ -71,7 +71,7 @@ The output executable and native assemblies will be generated under:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 WSL-MGR/
@@ -97,6 +97,6 @@ WSL-MGR/
 
 ---
 
-## ⚖️ License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more details.
