@@ -1,0 +1,50 @@
+﻿<Window x:Class="WSLMgr.CloneDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Duplicate WSL Distro"
+        Height="360" Width="500"
+        WindowStartupLocation="CenterOwner"
+        Style="{StaticResource CustomWindowStyle}">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="DUPLICATE / CLONE DISTRO" FontSize="11" FontWeight="Bold" Foreground="{StaticResource AccentLightBrush}"/>
+            <TextBlock x:Name="TxtSourceDistro" Text="Clone Ubuntu" FontSize="20" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}" Margin="0,2,0,0"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+            <StackPanel Margin="0,0,0,12">
+                <TextBlock Text="New Distro Name" Foreground="{StaticResource TextSecondaryBrush}" FontSize="12" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtCloneName" FontSize="14" Height="40" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+
+            <StackPanel>
+                <TextBlock Text="Install Directory (Destination)" Foreground="{StaticResource TextSecondaryBrush}" FontSize="12" Margin="0,0,0,5"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="TxtInstallPath" Grid.Column="0" FontSize="14" Height="40" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                    <Button x:Name="BtnBrowse" Grid.Column="1" Content="Browse..." Style="{StaticResource SecondaryButtonStyle}" Margin="10,0,0,0" Height="40" Padding="15,0" Click="BtnBrowse_Click"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Cancel" Style="{StaticResource SecondaryButtonStyle}" Width="100" Click="BtnCancel_Click"/>
+            <Button x:Name="BtnClone" Content="Clone" Style="{StaticResource PrimaryButtonStyle}" Width="100" Margin="10,0,0,0" Click="BtnClone_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
